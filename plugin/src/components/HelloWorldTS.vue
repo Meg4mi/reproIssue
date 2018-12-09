@@ -10,7 +10,7 @@ export default class HelloWorld extends Vue {
   created() {
     console.log(this.$vuetify);
   }
-  get theme() {
+  get theme(this: Vue) {
     return this.$vuetify;
   }
 }

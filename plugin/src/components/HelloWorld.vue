@@ -3,12 +3,13 @@
 </template>
 
 <script lang="ts">
+import Vue from "vue";
 export default {
-  created() {
+  created(this: Vue) {
     console.log(this.$vuetify);
   },
   computed: {
-    theme: function() {
+    theme: function(this: Vue): any {
       return this.$vuetify.theme;
     }
   }
