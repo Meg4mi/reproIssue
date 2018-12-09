@@ -1,17 +1,17 @@
 <template>
-  <h2>vue-class-component => {{theme}}</h2>
+  <h2>vue-class-component {{theme}}</h2>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 
 @Component
-export default class HelloWorld extends Vue {
+export default class HelloWorldTS extends Vue {
   created() {
-    console.log(this.$vuetify);
+    console.log("coucou", this.$vuetify);
   }
-  get theme(this: Vue) {
-    return this.$vuetify;
+  get theme() {
+    return this.$vuetify.theme;
   }
 }
 </script>

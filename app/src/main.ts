@@ -8,6 +8,8 @@ Vue.config.productionTip = false;
 Vue.use(Vuetify);
 Vue.use(Plugin);
 
-new Vue({
+const vm = new Vue({
   render: h => h(App)
 }).$mount('#app');
+
+vm.$vuetify.theme.primary = 'Test ';
