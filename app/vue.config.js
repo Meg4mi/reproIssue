@@ -4,9 +4,7 @@ module.exports = {
     if (process.env.NODE_ENV !== 'production') {
       // mutate config for production...
       config.resolve = {
-        alias: {
-          vue: path.resolve(__dirname, './node_modules/vue')
-        }
+        modules: [path.resolve(__dirname, './node_modules')]
       };
     }
   }
